@@ -103,6 +103,8 @@ export class ModuleDeclaration {
       this.git = parameters[':git']
       if (':ref' in parameters) {
         this.ref = parameters[':ref']
+      } else if (':tag' in parameters) {
+        this.ref = parameters[':tag']
       }
       this.forgeModule = false
       await this.fetchGitMetadata()
